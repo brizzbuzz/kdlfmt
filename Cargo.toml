@@ -1,0 +1,10 @@
+[package]
+name = "kdlfmt"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
+clap-stdin = "0.4.0"
+kdl = "4.6.0"
