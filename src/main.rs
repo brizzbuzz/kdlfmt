@@ -14,6 +14,7 @@ fn main() {
     let input = args.input.contents().unwrap();
     let mut doc = kdl::KdlDocument::new();
     doc.nodes_mut().push(input.parse().unwrap());
+    doc.fmt();
     // TODO: Should write to file instead of stdout if a file is provided
     println!("{}", &doc.to_string());
 }
