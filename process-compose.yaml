@@ -1,5 +1,0 @@
-version: "0.5"
-
-processes:
-  binary:
-    command: cargo watch -x build 

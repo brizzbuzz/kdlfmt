@@ -142,7 +142,6 @@
           cargo-watch # Rust hot-reloading
           just # Justfile runner
           nil # Nix language server
-          process-compose # Process management tool
           rust-analyzer # Rust language server
           watchexec # File watcher
         ];
