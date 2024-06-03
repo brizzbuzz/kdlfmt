@@ -8,3 +8,4 @@ license = "MIT"
 clap = { version = "4.5.4", features = ["derive"] }
 clap-stdin = "0.4.0"
 kdl = "4.6.0"
+miette = { version = "5.3.0", features = ["fancy"] } # NOTE: pinned due to dep by kdl

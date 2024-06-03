@@ -9,12 +9,14 @@ struct Args {
     input: FileOrStdin,
 }
 
-fn main() {
+fn main() -> miette::Result<()> {
     let args = Args::parse();
     let input = args.input.contents().unwrap();
-    let mut doc = kdl::KdlDocument::new();
-    doc.nodes_mut().push(input.parse().unwrap());
-    doc.fmt();
-    // TODO: Should write to file instead of stdout if a file is provided
-    println!("{}", &doc.to_string());
+    let mut res = input.parse::<kdl::KdlDocument>()?;
+
+    res.fmt();
+
+    println!("{}", res);
+
+    Ok(())
 }
